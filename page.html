@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Example</title>
+    <style>
+        .slider-container {
+            margin: 20px;
+        }
+
+        .slider {
+            width: 300px;
+        }
+
+        .value {
+            display: inline-block;
+            width: 40px;
+        }
+    </style>
+    <script>
+        function updateValue(sliderId, valueId) {
+            const slider = document.getElementById(sliderId);
+            const value = document.getElementById(valueId);
+            value.textContent = slider.value;
+        }
+    </script>
+</head>
+<body>
+    <div class="slider-container">
+        <label for="slider1">Slider 1:</label>
+        <input type="range" id="slider1" class="slider" min="0" max="255" value="0" oninput="updateValue('slider1', 'value1')">
+        <span id="value1" class="value">0</span>
+    </div>
+    <div class="slider-container">
+        <label for="slider2">Slider 2:</label>
+        <input type="range" id="slider2" class="slider" min="0" max="255" value="0" oninput="updateValue('slider2', 'value2')">
+        <span id="value2" class="value">0</span>
+    </div>
+    <div class="slider-container">
+        <label for="slider3">Slider 3:</label>
+        <input type="range" id="slider3" class="slider" min="0" max="255" value="0" oninput="updateValue('slider3', 'value3')">
+        <span id="value3" class="value">0</span>
+    </div>
+</body>
+</html>
